@@ -75,7 +75,7 @@ export const Login = () => {
         <p className="form-error">{formErrors.username}</p>
 
         <div className="form-group form-inner">
-          <label for="exampleInputEmail1">Email address</label>
+          {/* <label for="exampleInputEmail1">Email address</label> */}
           <input
             type="text"
             name="email"
@@ -88,7 +88,7 @@ export const Login = () => {
         </div>
         <p className="form-error">{formErrors.email}</p>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          {/* <label for="exampleInputPassword1">Password</label> */}
           <input
             type="text"
             name="password"
@@ -100,9 +100,9 @@ export const Login = () => {
         </div>
         <p className="form-error">{formErrors.password}</p>
         <div class="form-group">
-          <label for="exampleInputPassword1" className="">
+          {/* <label for="exampleInputPassword1" className="">
             confirmPassword
-          </label>
+          </label> */}
           <input
             type="text"
             name="confirmPassword"

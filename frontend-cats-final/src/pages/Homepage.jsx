@@ -13,8 +13,9 @@ function Homepage() {
       <Link className="homepage-link" to="/Login">
         Login
       </Link>
-
-      
+      <Link className="homepage-link" to="/Sellyourcat">
+        Sell your cat
+      </Link>
     </>
   );
 }
