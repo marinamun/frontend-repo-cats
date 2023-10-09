@@ -20,7 +20,7 @@ function AllCatsPage() {
   }, []);
   return (
     <>
-      <h1>TEST: CATSSSS🐈</h1>
+      <h1>TEST: CATSSS🐈</h1>
       {cats.map((cat) => (
         <p>{cat.name}</p>
       ))}
