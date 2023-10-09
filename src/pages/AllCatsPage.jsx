@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function AllCatsPage() {
   const [cats, setCats] = useState([]);
-const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const fetchCats = async () => {
     console.log(`${import.meta.env.VITE_API_URL}/cats`);
     try {
@@ -12,9 +14,9 @@ const [isLoading, setIsLoading] = useState(true);
         setCats(allCats);
       }
     } catch (error) {
-      console.error("Error fetching the data:", error); 
+      console.error("Error fetching the data:", error);
     } finally {
-      setIsLoading(false); 
+      setIsLoading(false);
     }
   };
   useEffect(() => {
@@ -28,7 +30,10 @@ const [isLoading, setIsLoading] = useState(true);
     <>
       <h1>TEST: CATSSSS🐈</h1>
       {cats.map((cat) => (
-       <Cards/>
+        <Link to={`/cats/${cat.id}`} key={cat.id}>
+          <img src={cat.url} style={{ height: "100px" }} />
+          <h1>{cat.name}</h1>
+        </Link>
       ))}
     </>
   );
