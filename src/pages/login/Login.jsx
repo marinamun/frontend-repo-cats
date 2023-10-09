@@ -66,7 +66,7 @@ export const Login = () => {
           <input
             type="text"
             name="username"
-            class="form-control"
+            className="form-control"
             placeholder="Enter email"
             value={formValues.username}
             onChange={handleChange}
@@ -75,11 +75,11 @@ export const Login = () => {
         <p className="form-error">{formErrors.username}</p>
 
         <div className="form-group form-inner">
-          <label for="exampleInputEmail1">Email address</label>
+          {/* <label for="exampleInputEmail1">Email address</label> */}
           <input
             type="text"
             name="email"
-            class="form-control"
+            className="form-control"
             aria-describedby="emailHelp"
             placeholder="Enter email"
             value={formValues.email}
@@ -87,33 +87,33 @@ export const Login = () => {
           />
         </div>
         <p className="form-error">{formErrors.email}</p>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+        <div className="form-group">
+          {/* <label for="exampleInputPassword1">Password</label> */}
           <input
             type="text"
             name="password"
-            class="form-control"
+            className="form-control"
             placeholder="Password"
             value={formValues.password}
             onChange={handleChange}
           />
         </div>
         <p className="form-error">{formErrors.password}</p>
-        <div class="form-group">
-          <label for="exampleInputPassword1" className="">
+        <div className="form-group">
+          {/* <label for="exampleInputPassword1" className="">
             confirmPassword
-          </label>
+          </label> */}
           <input
             type="text"
             name="confirmPassword"
-            class="form-control"
+            className="form-control"
             placeholder="Password"
             value={formValues.confirmPassword}
             onChange={handleChange}
           />
         </div>
         <p className="form-error">{formErrors.confirmPassword}</p>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>

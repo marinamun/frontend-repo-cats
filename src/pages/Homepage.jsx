@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import "./Homepage.css";
+=======
+import "./Homepage.css"
+>>>>>>> addallcatspage
 
 function Homepage() {
   return (
     <>
+<<<<<<< HEAD
       <Link
         className="homepage-link"
         to="/cats"
@@ -32,6 +37,20 @@ function Homepage() {
       >
         Login
       </Link>
+=======
+      <Link className="homepage-link" to="/cats">
+        ✨Click here to see all the cats
+      </Link>
+      <Link className="homepage-link" to="/Chart">
+        Home
+      </Link>
+      <Link className="homepage-link" to="/Login">
+        Login
+      </Link>
+      <Link className="homepage-link" to="/Sellyourcat">
+        Sell your cat
+      </Link>
+>>>>>>> addallcatspage
     </>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +9,14 @@ function AllCatsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const fetchCats = async () => {
     console.log(`${import.meta.env.VITE_API_URL}/cats`);
+=======
+import { useEffect, useState } from "react";
+
+function AllCatsPage() {
+  const [cats, setCats] = useState([]);
+const [isLoading, setIsLoading] = useState(true);
+  const fetchCats = async () => {
+>>>>>>> addallcatspage
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/cats`);
       if (response.ok) {
@@ -15,9 +24,15 @@ function AllCatsPage() {
         setCats(allCats);
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error fetching the data:", error);
     } finally {
       setIsLoading(false);
+=======
+      console.error("Error fetching the data:", error); 
+    } finally {
+      setIsLoading(false); 
+>>>>>>> addallcatspage
     }
   };
   useEffect(() => {
@@ -29,6 +44,7 @@ function AllCatsPage() {
   }
   return (
     <>
+<<<<<<< HEAD
       {cats.map((cat) => (
         <Link
           to={`/cats/${cat.id}`}
@@ -39,6 +55,11 @@ function AllCatsPage() {
           <img src={cat.url} style={{ height: "150px" }} />
           <h1>{cat.name}</h1>
         </Link>
+=======
+      <h1>TEST: CATSSSS🐈</h1>
+      {cats.map((cat) => (
+       <Cards/>
+>>>>>>> addallcatspage
       ))}
     </>
   );
