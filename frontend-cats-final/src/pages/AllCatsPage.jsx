@@ -5,6 +5,7 @@ function AllCatsPage() {
   const [cats, setCats] = useState([]);
 
   const fetchCats = async () => {
+    console.log(`${import.meta.env.VITE_API_URL}/cats`);
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/cats`);
       if (response.ok) {
@@ -12,7 +13,7 @@ function AllCatsPage() {
         setCats(allCats);
       }
     } catch (error) {
-      console.log("Error fetching the data");
+      console.log("Error fetching the data", error);
     }
   };
   useEffect(() => {
