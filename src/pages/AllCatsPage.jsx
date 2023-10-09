@@ -30,15 +30,18 @@ function AllCatsPage() {
   return (
     <>
       {cats.map((cat) => (
-        <Link
+        <div className="cat-names">
+          <Link
           to={`/cats/${cat.id}`}
           key={cat.id}
           style={{ textDecoration: "none", color: "black" }}
-          className="cat-names"
+          
         >
           <img src={cat.url} style={{ height: "150px" }} />
           <h1>{cat.name}</h1>
         </Link>
+        </div>
+        
       ))}
     </>
   );

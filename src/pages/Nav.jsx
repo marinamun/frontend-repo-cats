@@ -1,9 +1,10 @@
 import Homepage from "./Homepage";
+import "../App.css";
 
 export const Nav = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg  bg-warning">
+      <nav className="navbar navbar-expand-lg  bg-white rounded">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             😻
@@ -33,7 +34,11 @@ export const Nav = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button
+                className="btn btn-outline-success"
+                type="submit"
+                style={{ backgroundColor: "#AFEBB3", borderColor: "black" }}
+              >
                 Search
               </button>
             </form>
