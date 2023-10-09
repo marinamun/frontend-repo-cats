@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../App.css";
 
 function CatDetails() {
   const { catId } = useParams();
@@ -26,7 +27,7 @@ function CatDetails() {
 
   return cat ? (
     <>
-      <div>
+      <div className="cat-details">
         <h1>
           Meet: <strong>{cat.name}</strong>
         </h1>

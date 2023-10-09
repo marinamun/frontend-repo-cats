@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 function AllCatsPage() {
   const [cats, setCats] = useState([]);
@@ -28,10 +29,14 @@ function AllCatsPage() {
   }
   return (
     <>
-      <h1>TEST: CATSSSS🐈</h1>
       {cats.map((cat) => (
-        <Link to={`/cats/${cat.id}`} key={cat.id}>
-          <img src={cat.url} style={{ height: "100px" }} />
+        <Link
+          to={`/cats/${cat.id}`}
+          key={cat.id}
+          style={{ textDecoration: "none", color: "black" }}
+          className="cat-names"
+        >
+          <img src={cat.url} style={{ height: "150px" }} />
           <h1>{cat.name}</h1>
         </Link>
       ))}
