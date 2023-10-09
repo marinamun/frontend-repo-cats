@@ -27,7 +27,7 @@ const [isLoading, setIsLoading] = useState(true);
     <>
       <h1>TEST: CATSSSS🐈</h1>
       {cats.map((cat) => (
-        <p>{cat.name}</p>
+       <Cards/>
       ))}
     </>
   );
