@@ -1,4 +1,4 @@
-import Homepage from "./Homepage"
+import Homepage from "./Homepage";
 
 export const Nav = () => {
   return (
@@ -6,7 +6,7 @@ export const Nav = () => {
       <nav className="navbar navbar-expand-lg  bg-warning">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Logo
+            😻
           </a>
           <button
             className="navbar-toggler"
@@ -42,4 +42,4 @@ export const Nav = () => {
       </nav>
     </>
   );
-}
+};

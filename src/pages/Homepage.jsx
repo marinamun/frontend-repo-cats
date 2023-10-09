@@ -1,20 +1,37 @@
 import { Link } from "react-router-dom";
-import "./Homepage.css"
+import "./Homepage.css";
 
 function Homepage() {
   return (
     <>
-      <Link className="homepage-link" to="/cats">
-        ✨Click here to see all the cats
+      <Link
+        className="homepage-link"
+        to="/cats"
+        style={{ marginLeft: "10px", marginRight: "10px" }}
+      >
+        Buy a cat
       </Link>
-      <Link className="homepage-link" to="/Chart">
-        Home
+      <Link
+        className="homepage-link"
+        to="/Chart"
+        style={{ marginLeft: "10px", marginRight: "10px" }}
+      >
+        Sell your cat
       </Link>
-      <Link className="homepage-link" to="/Login">
+      <Link
+        to="/about"
+        className="homepage-link"
+        style={{ marginLeft: "10px", marginRight: "10px" }}
+      >
+        Our story
+      </Link>
+      <Link
+        className="homepage-link"
+        to="/Login"
+        style={{ marginLeft: "10px", marginRight: "10px" }}
+      >
         Login
       </Link>
-
-      
     </>
   );
 }
