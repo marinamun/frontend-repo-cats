@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../App.css";
@@ -7,6 +8,7 @@ function AllCatsPage() {
   const [cats, setCats] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const fetchCats = async () => {
+    console.log(`${import.meta.env.VITE_API_URL}/cats`);
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/cats`);
       if (response.ok) {
