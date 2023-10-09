@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import "../App.css";
 
 function AllCatsPage() {
@@ -34,16 +33,14 @@ function AllCatsPage() {
       {cats.map((cat) => (
         <div className="cat-names">
           <Link
-          to={`/cats/${cat.id}`}
-          key={cat.id}
-          style={{ textDecoration: "none", color: "black" }}
-          
-        >
-          <img src={cat.url} style={{ height: "150px" }} />
-          <h1>{cat.name}</h1>
-        </Link>
+            to={`/cats/${cat.id}`}
+            key={cat.id}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <img src={cat.url} style={{ height: "150px" }} />
+            <h1>{cat.name}</h1>
+          </Link>
         </div>
-        
       ))}
     </>
   );
