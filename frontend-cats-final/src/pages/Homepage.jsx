@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
+import "./Homepage.css"
 
 function Homepage() {
   return (
     <>
-      <div>
-        <h2>Our homepage's links:</h2>
-        <Link to="/cats">✨Click here to see all the cats</Link>
-      </div>
+      <Link className="homepage-link" to="/cats">
+        ✨Click here to see all the cats
+      </Link>
+      <Link className="homepage-link" to="/Chart">
+        Home
+      </Link>
+      <Link className="homepage-link" to="/Login">
+        Login
+      </Link>
+
+      
     </>
   );
 }
