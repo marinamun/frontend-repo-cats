@@ -13,7 +13,7 @@ function Homepage() {
       </Link>
       <Link
         className="homepage-link"
-        to="/Chart"
+        to="/Sellyourcat"
         style={{ marginLeft: "10px", marginRight: "10px" }}
       >
         Sell your cat
