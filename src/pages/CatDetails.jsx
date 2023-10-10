@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
+import ShoppingCart from "./ShoppingCart";
+import { Link, useNavigate } from "react-router-dom";
 
-function CatDetails() {
+function CatDetails({ setCartItem, item }) {
   const { catId } = useParams();
   const [cat, setCat] = useState();
+  const navigate = useNavigate();
 
   const fetchCat = async () => {
     try {
@@ -25,11 +28,14 @@ function CatDetails() {
     fetchCat();
   }, []);
 
-  function handleClick(event) {
-    event.preventDefault();
-    alert(
+  function handleClick() {
+    const newCartItem = { id: cat.id, name: cat.name, price: cat.price, breed: cat.breed, url: cat.url };
+    setCartItem([...item, newCartItem]);
+    navigate("/shopping-cart");
+
+    /*alert(
       "Our hackers got your address and your new cat will soon be running to your arms🎉"
-    );
+    );*/
   }
 
   return cat ? (
@@ -43,7 +49,8 @@ function CatDetails() {
             Meet: <strong>{cat.name}</strong>
           </h1>
           <p>{cat.description}</p>
-          <h3>Take this cutie home for only 💸{cat.price}💸</h3>
+          <h3>Take this cutie home for only 💸{cat.price}$💸</h3>
+
           <button onClick={handleClick} className="buy-button">
             <strong>Buy me</strong>
           </button>

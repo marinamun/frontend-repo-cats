@@ -32,6 +32,13 @@ function Homepage() {
       >
         Login
       </Link>
+      <Link
+        className="homepage-link"
+        to="/shopping-cart"
+        style={{ marginLeft: "10px", marginRight: "10px" }}
+      >
+        Shopping cart
+      </Link>
     </>
   );
 }
