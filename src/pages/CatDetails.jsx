@@ -25,15 +25,29 @@ function CatDetails() {
     fetchCat();
   }, []);
 
+  function handleClick(event) {
+    event.preventDefault();
+    alert(
+      "Our hackers got your address and your new cat will soon be running to your arms🎉"
+    );
+  }
+
   return cat ? (
     <>
       <div className="cat-details">
-        <h1>
-          Meet: <strong>{cat.name}</strong>
-        </h1>
-        <img src={cat.url} style={{ width: "250px" }} />
-        <p>{cat.description}</p>
-        <h3>Take this cutie home for only 💸{cat.price}💸</h3>
+        <div>
+          <img src={cat.url} style={{ width: "300px" }} />
+        </div>
+        <div>
+          <h1>
+            Meet: <strong>{cat.name}</strong>
+          </h1>
+          <p>{cat.description}</p>
+          <h3>Take this cutie home for only 💸{cat.price}💸</h3>
+          <button onClick={handleClick} className="buy-button">
+            <strong>Buy me</strong>
+          </button>
+        </div>
       </div>
     </>
   ) : (

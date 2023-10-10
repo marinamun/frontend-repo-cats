@@ -11,7 +11,7 @@ body {
 }
 
 /*Navbar*/
-.navbar{
+.navbar {
   background-color: white;
 }
 /*About*/
@@ -30,34 +30,72 @@ body {
 .cat-names img {
   border-radius: 15px;
   margin-top: 30px;
-  
 }
-.cat-names{
+.cat-names {
   background-color: white;
   border: 1px solid black;
   margin-left: 350px;
   margin-right: 350px;
-  filter: drop-shadow(0 0 0.75rem black);
+  filter: drop-shadow(0 0 0.75rem white);
   margin-bottom: 30px;
   margin-top: 40px;
   padding-top: 15px;
   padding-bottom: 15px;
+  border-radius: 10px;
+}
+.delete-button{
+  padding: 2px 3px;
+  border-radius: 15px;
+  border: 1px solid red;
+  filter: drop-shadow(0 0 0.75rem red);
 }
 
 /*CatDetails*/
+.cat-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
 .cat-details img {
   border-radius: 15px;
-  margin-top: 10px;
+  margin-top: 60px;
   margin-bottom: 30px;
+  margin-left: 100px;
   border: 2px solid white;
-  filter: drop-shadow(0 0 0.75rem #ffffff);
+  filter: drop-shadow(0 0 0.75rem #0cdbf2);
 }
 .cat-details h1 {
-  margin-top: 30px;
+  margin-top: 60px;
+  text-align: left;
+  margin-left: 100px;
 }
 .cat-details p {
-  margin-left: 40px;
-  margin-right: 40px;
+  text-align: left;
+
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.cat-details h3{
+  text-align: left;
+  margin-left: 100px;
+}
+.buy-button {
+  margin-top: 30px;
+  color: white;
+  background-color: #0cdbf2;
+  border: 1px solid #0cdbf2;
+  border-radius: 15px;
+  padding: 10px 25px;
+  
+  
+}
+.buy-button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 #root {
