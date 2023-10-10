@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../sell/Sellyourcat.css";
+import { useNavigate } from "react-router-dom";
 
 function Sellyourcat() {
   const [name, setName] = useState("");
@@ -7,6 +8,8 @@ function Sellyourcat() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
+  const navigate =useNavigate();
+ 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,7 +18,7 @@ function Sellyourcat() {
       breed,
       description,
       price,
-      photo,
+      url:photo,
     };
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/cats`, {
@@ -28,6 +31,7 @@ function Sellyourcat() {
       if (response.ok) {
         const newCat = await response.json();
         console.log(newCat);
+        navigate("/cats");
       }
     } catch (error) {
       console.log(error);
@@ -41,6 +45,7 @@ function Sellyourcat() {
         <div className="form-group">
           <label for="exampleInputEmail1"> Name:</label>
           <input
+            id="catId"
             className="cats-input"
             type="text"
             name="description"
@@ -52,6 +57,7 @@ function Sellyourcat() {
         <div className="form-group">
           <label for="exampleInputEmail1"> Breed:</label>
           <input
+            id="catId"
             className="cats-input"
             type="text"
             name="breed"
@@ -63,6 +69,7 @@ function Sellyourcat() {
         <div className="form-group">
           <label for="exampleInputEmail1"> Description:</label>
           <input
+            id="catId"
             className="cats-input"
             type="text"
             name="description"
@@ -74,6 +81,7 @@ function Sellyourcat() {
         <div className="form-group">
           <label for="exampleInputEmail1"> Price in $:</label>
           <input
+            id="catId"
             className="cats-input"
             type="number"
             name="price"
@@ -84,6 +92,7 @@ function Sellyourcat() {
         <div className="form-group">
           <label for="exampleInputEmail1"> Photo url:</label>
           <input
+            id="catId"
             className="cats-input"
             type="text"
             name="photo"

@@ -19,7 +19,7 @@ function App() {
     <>
       <Nav />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        {/* <Route path="/" element={<Homepage />} /> */}
         <Route path="/cats" element={<AllCatsPage />}></Route>
         <Route
           path="/cats/:catId"
