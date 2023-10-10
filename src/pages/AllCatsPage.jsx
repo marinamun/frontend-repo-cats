@@ -27,21 +27,30 @@ function AllCatsPage() {
   if (isLoading) {
     return <div>Login...</div>;
   }
+  const deleteCat = (catId) => {
+    const filteredCats = cats.filter((cat) => {
+      return cat.id !== catId;
+    });
+    setCats(filteredCats);
+  };
+
   return (
     <>
       {cats.map((cat) => (
         <div className="cat-names">
           <Link
-          to={`/cats/${cat.id}`}
-          key={cat.id}
-          style={{ textDecoration: "none", color: "black" }}
-          
-        >
-          <img src={cat.url} style={{ height: "150px" }} />
-          <h1>{cat.name}</h1>
-        </Link>
+            to={`/cats/${cat.id}`}
+            key={cat.id}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <img src={cat.url} style={{ height: "150px" }} />
+            <h3>{cat.price}</h3>
+            <h1>{cat.name}</h1>
+          </Link>
+          <button className="delete-button" onClick={() => deleteCat(cat.id)}>
+            🗑
+          </button>
         </div>
-        
       ))}
     </>
   );

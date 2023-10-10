@@ -36,11 +36,18 @@ body {
   border: 1px solid black;
   margin-left: 350px;
   margin-right: 350px;
-  filter: drop-shadow(0 0 0.75rem black);
+  filter: drop-shadow(0 0 0.75rem white);
   margin-bottom: 30px;
   margin-top: 40px;
   padding-top: 15px;
   padding-bottom: 15px;
+  border-radius: 10px;
+}
+.delete-button{
+  padding: 2px 3px;
+  border-radius: 15px;
+  border: 1px solid red;
+  filter: drop-shadow(0 0 0.75rem red);
 }
 
 /*CatDetails*/
