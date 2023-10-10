@@ -43,7 +43,7 @@ body {
   padding-bottom: 15px;
   border-radius: 10px;
 }
-.delete-button{
+.delete-button {
   padding: 2px 3px;
   border-radius: 15px;
   border: 1px solid red;
@@ -79,7 +79,7 @@ body {
   margin-left: 100px;
   margin-right: 100px;
 }
-.cat-details h3{
+.cat-details h3 {
   text-align: left;
   margin-left: 100px;
 }
@@ -90,14 +90,51 @@ body {
   border: 1px solid #0cdbf2;
   border-radius: 15px;
   padding: 10px 25px;
-  
-  
 }
 .buy-button:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
-
+/*Shopping Cart*/
+.shoppingCart {
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.75rem white);
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.cart-h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+}
+.cart-container {
+  margin-top: 50px;
+  
+}
+.cart-container h3 {
+  padding-top: 20px;
+}
+.cart-image {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.payment {
+  padding-top: 20px;
+  padding-left: 20px;
+  margin: 20px;
+  padding-right: 20px;
+  background-color: #e0f9f4;
+  border-radius: 10px;
+}
+.payment h4{
+  margin-top: 30px;
+}
+.payment button{
+  margin-bottom: 30px;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;

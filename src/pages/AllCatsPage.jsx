@@ -45,7 +45,7 @@ function AllCatsPage() {
             style={{ textDecoration: "none", color: "black" }}
           >
             <img src={cat.url} style={{ height: "150px" }} />
-            <h3>{cat.price}</h3>
+            <h3>{cat.price}$</h3>
             <h1>{cat.name}</h1>
           </Link>
           <button className="delete-button" onClick={() => deleteCat(cat.id)}>

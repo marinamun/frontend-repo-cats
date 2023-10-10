@@ -76,10 +76,10 @@ function Sellyourcat() {
         </div>
 
         <div className="form-group">
-          <label for="exampleInputEmail1"> Price:</label>
+          <label for="exampleInputEmail1"> Price in $:</label>
           <input
             className="cats-input"
-            type="text"
+            type="number"
             name="price"
             value={price}
             onChange={(event) => setPrice(event.target.value)}
