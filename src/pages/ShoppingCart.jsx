@@ -5,7 +5,6 @@ function ShoppingCart(props) {
   const total = item.reduce((acc, item) => acc + item.price, 0);
   return (
     <div className="shoppingCart">
-
       <div className="shopping-info">
         <h1 className="cart-h1">Shopping cart🛍</h1>
         {item.map((item) => (
