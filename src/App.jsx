@@ -11,6 +11,7 @@ import CatDetails from "./pages/CatDetails";
 import About from "./pages/About";
 import ShoppingCart from "./pages/ShoppingCart";
 import { useState } from "react";
+import UpdateCats from "./pages/sell/UpdateCats"
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -19,7 +20,7 @@ function App() {
     <>
       <Nav />
       <Routes>
-        <Route path="/" element={<Homepage />} /> 
+        <Route path="/" element={<Homepage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/cats" element={<AllCatsPage />}></Route>
         <Route
@@ -30,10 +31,11 @@ function App() {
         <Route path="/Login" element={<Login />}></Route>
         <Route
           path="/shopping-cart"
-          element={<ShoppingCart item={cartItem} setCartItem={setCartItem}/>}
+          element={<ShoppingCart item={cartItem} setCartItem={setCartItem} />}
         ></Route>
 
         <Route path="/Sellyourcat" element={<Sellyourcat />}></Route>
+        <Route path="/UpdateCats" element={<UpdateCats />}></Route>
       </Routes>
     </>
   );

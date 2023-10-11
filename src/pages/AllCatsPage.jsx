@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import UpdateCats from "./sell/UpdateCats";
 import "../App.css";
 
 function AllCatsPage() {
@@ -39,11 +40,12 @@ function AllCatsPage() {
             key={cat.id}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img src={cat.urlPhoto} style={{ height: "150px" }} />
+            <img src={cat.url} style={{ height: "150px" }} />
             <h1>{cat.name}</h1>
-            
           </Link>
-          <button>Edit</button>
+          <Link to={`/UpdateCats`}>
+            <button onClick={UpdateCats}>Edit</button>
+          </Link>
         </div>
       ))}
     </>

@@ -50,68 +50,126 @@ const Sellyourcat = ({ isUpdate, project }) => {
   }, [project]);
 
   return (
-    <div className="sellyourcat">
-      <h2>Fill this form to sell your cat:</h2>
-      <form className="form-login" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label for="exampleInputEmail1"> Name:</label>
-          <input
-            className="cats-input"
-            type="text"
-            name="description"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </div>
+    // <div className="sellyourcat">
+    //   <h2>Fill this form to sell your cat:</h2>
+    //   <form className="form-login" onSubmit={handleSubmit}>
+    //     <div className="form-group">
+    //       <label for="exampleInputEmail1"> Name:</label>
+    //       <input
+    //         className="cats-input"
+    //         type="text"
+    //         name="description"
+    //         value={name}
+    //         onChange={(event) => setName(event.target.value)}
+    //       />
+    //     </div>
 
-        <div className="form-group">
-          <label for="exampleInputEmail1"> Breed:</label>
-          <input
-            className="cats-input"
-            type="text"
-            name="breed"
-            value={breed}
-            onChange={(event) => setBreed(event.target.value)}
-          />
-        </div>
+    //     <div className="form-group">
+    //       <label for="exampleInputEmail1"> Breed:</label>
+    //       <input
+    //         className="cats-input"
+    //         type="text"
+    //         name="breed"
+    //         value={breed}
+    //         onChange={(event) => setBreed(event.target.value)}
+    //       />
+    //     </div>
 
-        <div className="form-group">
-          <label for="exampleInputEmail1"> Description:</label>
-          <input
-            className="cats-input"
-            type="text"
-            name="description"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-          />
-        </div>
+    //     <div className="form-group">
+    //       <label for="exampleInputEmail1"> Description:</label>
+    //       <input
+    //         className="cats-input"
+    //         type="text"
+    //         name="description"
+    //         value={description}
+    //         onChange={(event) => setDescription(event.target.value)}
+    //       />
+    //     </div>
 
-        <div className="form-group">
-          <label for="exampleInputEmail1"> Price in $:</label>
+    //     <div className="form-group">
+    //       <label for="exampleInputEmail1"> Price in $:</label>
+    //       <input
+    //         className="cats-input"
+    //         type="number"
+    //         name="price"
+    //         value={price}
+    //         onChange={(event) => setPrice(event.target.value)}
+    //       />
+    //     </div>
+    //     <div className="form-group">
+    //       <label for="exampleInputEmail1"> Photo url:</label>
+    //       <input
+    //         className="cats-input"
+    //         type="text"
+    //         name="photo"
+    //         value={photo}
+    //         onChange={(event) => setPhoto(event.target.value)}
+    //       />
+    //     </div>
+    //     <button type="submit" className="btn btn-warning">
+    //       Sell cat
+    //     </button>
+    //   </form>
+    // </div>
+    <form className="form-login" onSubmit={onSubmit}>
+      <div className="form-group">
+        <label for="exampleInputEmail1"> Name:</label>
+        <input
+          className="cats-input"
+          type="text"
+          name="description"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <label for="exampleInputEmail1"> Breed:</label>
+        <input
+          className="cats-input"
+          type="text"
+          name="breed"
+          value={breed}
+          onChange={(event) => setBreed(event.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <label for="exampleInputEmail1"> Description:</label>
+        <input
+          className="cats-input"
+          type="text"
+          name="description"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <label for="exampleInputEmail1"> Price:</label>
+        <input
+          className="cats-input"
+          type="text"
+          name="price"
+          value={price}
+          onChange={(event) => setPrice(event.target.value)}
+        />
+      </div>
+      <div className="form-group">
+           <label for="exampleInputEmail1"> Photo url:</label>
           <input
             className="cats-input"
-            type="number"
-            name="price"
-            value={price}
-            onChange={(event) => setPrice(event.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label for="exampleInputEmail1"> Photo url:</label>
-          <input
-            className="cats-input"
-            type="text"
-            name="photo"
-            value={photo}
+             type="text"
+             name="photo"
+             value={photo}
             onChange={(event) => setPhoto(event.target.value)}
           />
-        </div>
-        <button type="submit" className="btn btn-warning">
-          Sell cat
-        </button>
-      </form>
-    </div>
-    
+         </div>
+      
+      <button class="btn btn-primary" type="submit">
+        {isUpdate ? "Update" : "Sell Cat"}
+      </button>
+    </form>
   );
 };
 
