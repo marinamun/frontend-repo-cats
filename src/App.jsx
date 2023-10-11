@@ -35,7 +35,7 @@ function App() {
         ></Route>
 
         <Route path="/Sellyourcat" element={<Sellyourcat />}></Route>
-        <Route path="/UpdateCats" element={<UpdateCats />}></Route>
+        <Route path="/UpdateCats/:id" element={<UpdateCats isUpdate={true}/>}></Route>
       </Routes>
     </>
   );

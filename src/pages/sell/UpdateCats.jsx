@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Sellyourcat.css";
 
-const UpdateCats = ({ isUpdate, project }) => {
+const UpdateCats = ({ isUpdate }) => {
   const navigate = useNavigate();
-
+  const {id}=useParams();
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
   const [description, setDescription] = useState("");
@@ -13,12 +13,12 @@ const UpdateCats = ({ isUpdate, project }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const payload = { name, breed, description, price, photo };
+    const payload = { name, breed, description, price, url:photo };
 
     try {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/cats${
-          isUpdate ? `/${project.id}` : ""
+          isUpdate ? `/${id}` : ""
         }`,
         {
           method: "PUT",
@@ -38,16 +38,29 @@ const UpdateCats = ({ isUpdate, project }) => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    if (isUpdate,project) {
-      setName(project.name);
-      setBreed(project.breed);
-      setDescription(project.description);
-      setPrice(project.price);
-      setPhoto(project.photo);
+  const fetchCat = async()=>{
+    try{
+       const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/cats${isUpdate ? `/${id}` : ""}`
+    );
+    if (response.ok) {
+      const cat = await response.json();
+      setName(cat.name);
+      setBreed(cat.breed);
+      setDescription(cat.description);
+      setPrice(cat.price);
+      setPhoto(cat.url);
     }
-  }, [project]);
+    }catch(error){
+      console.log(error);
+    }
+   
+  }
+  useEffect(() => {
+    if (isUpdate) {
+     fetchCat();
+    }
+  }, []);
 
   return (
     <form className="form-login" onSubmit={onSubmit}>
@@ -105,7 +118,9 @@ const UpdateCats = ({ isUpdate, project }) => {
         />
       </div>
 
-      <button class="btn btn-primary" type="submit"></button>
+      <button class="btn btn-primary" type="submit">
+        Update
+      </button>
     </form>
   );
 };
