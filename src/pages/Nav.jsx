@@ -3,7 +3,7 @@ import "../App.css";
 
 export const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white rounded">
+    <nav className="navbar navbar-expand-lg bg-white rounded" >
       <div className="container-fluid">
         <Link to={`/`}>
           {" "}
