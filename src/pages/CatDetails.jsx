@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
-import ShoppingCart from "./ShoppingCart";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function CatDetails({ setCartItem, item }) {
   const { catId } = useParams();
@@ -29,7 +28,13 @@ function CatDetails({ setCartItem, item }) {
   }, []);
 
   function handleClick() {
-    const newCartItem = { id: cat.id, name: cat.name, price: cat.price, breed: cat.breed, url: cat.url };
+    const newCartItem = {
+      id: cat.id,
+      name: cat.name,
+      price: cat.price,
+      breed: cat.breed,
+      url: cat.url,
+    };
     setCartItem([...item, newCartItem]);
     navigate("/shopping-cart");
 
