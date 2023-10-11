@@ -28,12 +28,7 @@ function AllCatsPage() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  const deleteCat = (catId) => {
-    const filteredCats = cats.filter((cat) => {
-      return cat.id !== catId;
-    });
-    setCats(filteredCats);
-  };
+  
 
   return (
     <>
@@ -44,13 +39,11 @@ function AllCatsPage() {
             key={cat.id}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img src={cat.url} style={{ height: "150px" }} />
-            <h3>{cat.price}$</h3>
+            <img src={cat.urlPhoto} style={{ height: "150px" }} />
             <h1>{cat.name}</h1>
+            
           </Link>
-          <button className="delete-button" onClick={() => deleteCat(cat.id)}>
-            🗑
-          </button>
+          <button>Edit</button>
         </div>
       ))}
     </>

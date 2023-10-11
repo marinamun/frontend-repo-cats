@@ -16,7 +16,6 @@ export const Login = () => {
     setFormValue({ ...formValues, [name]: value });
     console.log(formValues);
   };
-//featuregit 
   const hanhleSubmit = (ev) => {
     ev.preventDefault();
     setFormErrors(Validate(formValues));
@@ -55,63 +54,35 @@ export const Login = () => {
   };
   return (
     <div>
-      {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success ">signed is successfully </div>
-      ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-      )} */}
-
+      
       <form className="form-login" onSubmit={hanhleSubmit}>
-        <div className="form-group form-inner">
-          <input
-            type="text"
-            name="username"
-            className="form-control"
-            placeholder="Enter email"
-            value={formValues.username}
-            onChange={handleChange}
-          />
-        </div>
-        <p className="form-error">{formErrors.username}</p>
-
-        <div className="form-group form-inner">
-          {/* <label for="exampleInputEmail1">Email address</label> */}
-          <input
-            type="text"
-            name="email"
-            className="form-control"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-            value={formValues.email}
-            onChange={handleChange}
-          />
-        </div>
+        <input
+          type="text"
+          name="email"
+          className="form-control"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          value={formValues.email}
+          onChange={handleChange}
+        />
         <p className="form-error">{formErrors.email}</p>
-        <div className="form-group">
-          {/* <label for="exampleInputPassword1">Password</label> */}
-          <input
-            type="text"
-            name="password"
-            className="form-control"
-            placeholder="Password"
-            value={formValues.password}
-            onChange={handleChange}
-          />
-        </div>
+        <input
+          type="text"
+          name="password"
+          className="form-control"
+          placeholder="Password"
+          value={formValues.password}
+          onChange={handleChange}
+        />
         <p className="form-error">{formErrors.password}</p>
-        <div className="form-group">
-          {/* <label for="exampleInputPassword1" className="">
-            confirmPassword
-          </label> */}
-          <input
-            type="text"
-            name="confirmPassword"
-            className="form-control"
-            placeholder="Password"
-            value={formValues.confirmPassword}
-            onChange={handleChange}
-          />
-        </div>
+        <input
+          type="text"
+          name="Confirm password"
+          className="form-control"
+          placeholder="Confirm password"
+          value={formValues.confirmPassword}
+          onChange={handleChange}
+        />
         <p className="form-error">{formErrors.confirmPassword}</p>
         <button type="submit" className="btn btn-primary">
           Submit

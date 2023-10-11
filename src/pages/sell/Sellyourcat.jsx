@@ -1,42 +1,53 @@
 import { useEffect, useState } from "react";
-import "../sell/Sellyourcat.css";
 import { useNavigate } from "react-router-dom";
+import "./Sellyourcat.css"
 
-function Sellyourcat() {
+const Sellyourcat = ({ isUpdate, project }) => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
-  const navigate =useNavigate();
- 
 
-  const handleSubmit = async (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    const newData = {
-      name,
-      breed,
-      description,
-      price,
-      url:photo,
-    };
+    const payload = { name, breed, description, price, photo };
+
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/cats`, {
-        method: "POST",
-        body: JSON.stringify(newData),
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/cats${
+          isUpdate ? `/${project.id}` : ""
+        }`,
+        {
+          method: isUpdate ? "PUT" : "POST",
+          body: JSON.stringify(payload),
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
+      console.log(response);
       if (response.ok) {
-        const newCat = await response.json();
-        console.log(newCat);
-        navigate("/cats");
+        const currentProject = await response.json();
+        console.log(currentProject);
+        navigate(`/cats/${currentProject.id}`);
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    if (isUpdate && project) {
+      setName(project.name);
+      setBreed(project.breed);
+      setDescription(project.description);
+      setPrice(project.price);
+      setPhoto(project.photo);
+    }
+  }, [project]);
 
   return (
     <div className="sellyourcat">
@@ -100,7 +111,10 @@ function Sellyourcat() {
         </button>
       </form>
     </div>
+    
   );
-}
+};
+
+
 
 export default Sellyourcat;

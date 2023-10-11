@@ -1,8 +1,16 @@
+import { useState, useEffect } from "react";
 import "../App.css";
 
-function ShoppingCart(props) {
-  const { item } = props;
-  const total = item.reduce((acc, item) => acc + item.price, 0);
+function ShoppingCart({ item, setCartItem }) {
+  const total = item.reduce((acc, item) => acc + parseFloat(item.price), 0);
+
+  const deleteCat = (itemId) => {
+    const filteredItem = item.filter((item) => {
+      return item.id !== itemId;
+    });
+    setCartItem(filteredItem);
+  };
+
   return (
     <div className="shoppingCart">
       <div className="shopping-info">
@@ -20,6 +28,12 @@ function ShoppingCart(props) {
                   className="cart-image"
                 />
               </h4>
+              <button
+                className="delete-button"
+                onClick={() => deleteCat(item.id)}
+              >
+                🗑
+              </button>
             </div>
           </div>
         ))}

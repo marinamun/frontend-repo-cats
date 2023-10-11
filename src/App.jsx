@@ -19,7 +19,8 @@ function App() {
     <>
       <Nav />
       <Routes>
-        {/* <Route path="/" element={<Homepage />} /> */}
+        <Route path="/" element={<Homepage />} /> 
+        <Route path="/" element={<Homepage />} />
         <Route path="/cats" element={<AllCatsPage />}></Route>
         <Route
           path="/cats/:catId"
@@ -29,7 +30,7 @@ function App() {
         <Route path="/Login" element={<Login />}></Route>
         <Route
           path="/shopping-cart"
-          element={<ShoppingCart item={cartItem} />}
+          element={<ShoppingCart item={cartItem} setCartItem={setCartItem}/>}
         ></Route>
 
         <Route path="/Sellyourcat" element={<Sellyourcat />}></Route>
