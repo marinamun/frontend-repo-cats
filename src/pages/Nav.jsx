@@ -5,9 +5,14 @@ export const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white rounded">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          😻
-        </a>
+        <Link to={`/`}>
+          {" "}
+          <img
+            src="https://logowik.com/content/uploads/images/cute-cat-clipart712.logowik.com.webp"
+            style={{ width: "60px" }}
+          />
+        </Link>
+
         <button
           className="navbar-toggler"
           type="button"

@@ -40,7 +40,7 @@ function AllCatsPage() {
             key={cat.id}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img src={cat.url} style={{ height: "150px" }} />
+            <img src={cat.urlPhoto} style={{ height: "150px" }} />
             <h1>{cat.name}</h1>
           </Link>
           <Link to={`/UpdateCats`}>
