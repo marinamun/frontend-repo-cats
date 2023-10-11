@@ -2,7 +2,7 @@ import "../App.css";
 
 function ShoppingCart(props) {
   const { item } = props;
-  const total = item.reduce((acc, item) => acc + item.price, 0);
+  const total = item.reduce((acc, item) => acc + parseFloat(item.price), 0);
   return (
     <div className="shoppingCart">
       <div className="shopping-info">
