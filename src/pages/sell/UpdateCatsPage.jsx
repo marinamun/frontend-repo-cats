@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProjectForm from "../../components/ProjectsForm";
+import {Sellyourcat} from "./Sellyourcat";
 
 const UpdateProjectPage = () => {
   const { catsId } = useParams();
@@ -25,7 +25,7 @@ const UpdateProjectPage = () => {
   return (
     <>
       <h1>Update Project</h1>
-      <ProjectForm isUpdate project={project} />
+      <Sellyourcat isUpdate project={project} />
     </>
   );
 };
