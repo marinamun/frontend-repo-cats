@@ -5,7 +5,7 @@ export const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white rounded">
       <div className="container-fluid">
-        <Link to={`/cats`}>
+        <Link to={`/`}>
           {" "}
           <img
             src="https://logowik.com/content/uploads/images/cute-cat-clipart712.logowik.com.webp"

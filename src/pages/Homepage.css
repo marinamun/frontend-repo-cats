@@ -1,9 +1,42 @@
-.homepage-link {
-  text-decoration: none;
-  margin-left: 10px;
-  color: black;
-  font-size: 20px;
+.Homepage {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  filter: drop-shadow(0 0 0.75rem white);
+  display: flex;
+  height: 400px;
+  text-align: left;
 }
-.homepage-link:hover {
-  text-decoration: underline;
+.Homepage h1{
+  margin-bottom: 20px;
+}
+.Homepage h3{
+  margin-bottom: 15px;
+}
+.gif {
+  width: 200px;
+  margin-left: 150px;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.75rem #0cdbf2);
+}
+.left {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.right {
+  margin-left: 100px;
+  margin-top: 70px;
+}
+.homepage-button {
+  color: white;
+  background-color: #0cdbf2;
+  border: 1px solid #0cdbf2;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+.homepage-button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
