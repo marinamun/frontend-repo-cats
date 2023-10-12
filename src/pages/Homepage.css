@@ -11,9 +11,15 @@
 }
 .Homepage h1{
   margin-bottom: 20px;
+  font-family: 'Neucha', cursive;
 }
 .Homepage h3{
   margin-bottom: 15px;
+  font-family: 'Neucha', cursive;
+
+}
+.Homepage p{
+  font-family: 'Neucha', cursive;
 }
 .gif {
   width: 200px;
@@ -35,6 +41,7 @@
   border: 1px solid #0cdbf2;
   padding: 10px 25px;
   border-radius: 30px;
+  font-family: 'Neucha', cursive;
 }
 .homepage-button:hover {
   transform: scale(1.1);
