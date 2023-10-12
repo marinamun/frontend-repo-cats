@@ -14,14 +14,15 @@ function ShoppingCart({ item, setCartItem }) {
   return (
     <div className="shoppingCart">
       <div className="shopping-info">
-        <h1 className="cart-h1">Shopping cart🛍</h1>
+        <h1 className="cart-h1">Shopping cart💸</h1>
         {item.map((item) => (
           <div key={item.id} className="cart-container">
             <div>
               <h3>You are buying:</h3>
               <h4>
                 {" "}
-                👉🏼{item.name}, a <em>{item.breed}</em> that costs {item.price}${" "}
+                👉🏼{item.name}, a <em>{item.breed}</em> that costs{" "}
+                <strong>{item.price}</strong>${" "}
                 <img
                   src={item.url}
                   style={{ width: "90px" }}
@@ -32,23 +33,25 @@ function ShoppingCart({ item, setCartItem }) {
                 className="delete-button"
                 onClick={() => deleteCat(item.id)}
               >
-                🗑
+                🗑️
               </button>
+              <hr/>
             </div>
           </div>
         ))}
       </div>
 
       <div className="payment">
+        
+        <h3><strong>Total price: {total}$</strong></h3>
         <h4>Enter your payment details:</h4>
-        <h3>Total price: {total}$</h3>
         <label>
-          Your PayPal account:
-          <input type="text" />
-        </label>
+          Your PayPal account: <br/>
+          <input type="text" /> 
+        </label><br/>
         <button
           onClick={() =>
-            alert("Payment successful! Thank you for your purchase.")
+            alert("Payment successful! Your new friend is packing his little suitcase right now🎒")
           }
         >
           Pay
