@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import "../App.css";
-
+import "../pages/Nav.css"
 export const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white rounded" >
+    <nav className="navbar navbar-expand-lg bg-white rounded nav">
       <div className="container-fluid">
         <Link to={`/`}>
           {" "}

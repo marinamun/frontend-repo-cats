@@ -54,8 +54,7 @@ export const Login = () => {
   };
   return (
     <div>
-      
-      <form className="form-login" onSubmit={hanhleSubmit}>
+      <form className="login" onSubmit={hanhleSubmit}>
         <input
           type="text"
           name="email"
@@ -77,7 +76,7 @@ export const Login = () => {
         <p className="form-error">{formErrors.password}</p>
         <input
           type="text"
-          name="Confirm password"
+          name="confirmPassword"
           className="form-control"
           placeholder="Confirm password"
           value={formValues.confirmPassword}

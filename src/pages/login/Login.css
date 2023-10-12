@@ -1,13 +1,14 @@
-.form-login{
+.login{
     width: 300px;
-    height: 600px;
+    height: 300px;
     border:1px solid lightgray;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
     margin-left: 500px;
     margin-top: 100px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
 }
 .form-error{
     color: red;
