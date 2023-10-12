@@ -6,7 +6,6 @@ export const Nav = () => {
     <div className="navbar-container">
       <button
         class="navbar-toggler"
-        
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -29,7 +28,11 @@ export const Nav = () => {
               to="/cats"
               className="nav-item"
               activeClassName="active"
-              style={{ marginLeft: "10px", marginRight: "10px" }}
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                color: "black",
+              }}
             >
               Buy a cat
             </NavLink>
@@ -39,7 +42,11 @@ export const Nav = () => {
               to="/Sellyourcat"
               className="nav-item"
               activeClassName="active"
-              style={{ marginLeft: "10px", marginRight: "10px" }}
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                color: "black",
+              }}
             >
               Sell your cat
             </NavLink>
@@ -49,7 +56,11 @@ export const Nav = () => {
               to="/about"
               className="nav-item"
               activeClassName="active"
-              style={{ marginLeft: "10px", marginRight: "10px" }}
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                color: "black",
+              }}
             >
               Our story
             </NavLink>
@@ -59,7 +70,11 @@ export const Nav = () => {
               to="/Login"
               className="nav-item"
               activeClassName="active"
-              style={{ marginLeft: "10px", marginRight: "10px" }}
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                color: "black",
+              }}
             >
               Login
             </NavLink>
@@ -69,7 +84,11 @@ export const Nav = () => {
               to="/shopping-cart"
               className="nav-item"
               activeClassName="active"
-              style={{ marginLeft: "10px", marginRight: "10px" }}
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                color: "black",
+              }}
             >
               Shopping cart
             </NavLink>
