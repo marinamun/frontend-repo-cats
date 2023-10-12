@@ -2,7 +2,25 @@ body {
   background-image: url("./pages/images/background6.png");
   background-size: contain;
 }
-
+/*Credits*/
+#credits {
+  text-align: center;
+  font-size: 10px;
+  line-height: 1px;
+  font-family: "Neucha", cursive;
+  color: black;
+}
+#credits a {
+  color: black;
+  text-decoration: none;
+}
+#credits:hover{
+  font-size: 12px;
+}
+#credits a:hover {
+  font-size: 12px;
+  
+}
 /*Navbar*/
 
 .navbar {
@@ -83,6 +101,12 @@ body {
   border-radius: 10px;
   padding-bottom: 30px;
   font-family: "Neucha", cursive;
+}
+#name{
+  color: #0CDBF2;
+}
+#breed{
+  color: #F097C4
 }
 .cat-details img {
   border-radius: 15px;

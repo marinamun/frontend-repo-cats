@@ -51,10 +51,11 @@ function CatDetails({ setCartItem, item }) {
         </div>
         <div>
           <h1>
-            Meet: <strong>{cat.name}</strong>
+            Meet: <strong><span id="name">{cat.name}</span></strong>
           </h1>
+          <p id="breed"><strong>A beautiful <em>{cat.breed}</em></strong></p>
           <p>{cat.description}</p>
-          <h3>Take this cutie home for only 💸{cat.price}$💸</h3>
+          <h3>Take this cutie home for only 💸<strong>{cat.price}$</strong>💸</h3>
 
           <button onClick={handleClick} className="buy-button">
             <strong>Buy me</strong>
