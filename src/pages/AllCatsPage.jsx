@@ -29,7 +29,6 @@ function AllCatsPage() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  
 
   return (
     <>
@@ -41,10 +40,14 @@ function AllCatsPage() {
             style={{ textDecoration: "none", color: "black" }}
           >
             <img src={cat.url} style={{ height: "150px" }} />
-            <h1>{cat.name}</h1>
+            <div className="name-price">
+              <h1>{cat.name}</h1> <h4>- {cat.price}$</h4>{" "}
+            </div>
           </Link>
           <Link to={`/UpdateCats/${cat.id}`}>
-            <button onClick={UpdateCats}>Edit</button>
+            <button onClick={UpdateCats} className="edit-button">
+              ✏️
+            </button>
           </Link>
         </div>
       ))}
