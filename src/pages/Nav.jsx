@@ -6,6 +6,7 @@ export const Nav = () => {
     <div className="navbar-container">
       <button
         class="navbar-toggler"
+        
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"

@@ -49,7 +49,7 @@ function CatDetails({ setCartItem, item }) {
         <div>
           <img src={cat.url} style={{ width: "300px" }} />
         </div>
-        <div>
+        <div id="details-right">
           <h1>
             Meet: <strong><span id="name">{cat.name}</span></strong>
           </h1>

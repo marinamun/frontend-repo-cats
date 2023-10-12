@@ -1,18 +1,19 @@
 .active {
-  background-color: purple; 
+  background-color: #f097c4; 
   color:white;
   border-radius: 5px;
 }
 .nav-item{
   text-decoration: none;
 }
-.navbar-container {
-  max-width: 1200px !important; 
+
+/*.navbar-container {
+  max-width: 1000px !important; 
   margin: 0 auto !important;
   margin-top: -33px;
-}
-.nav{
+}*/
+/*.nav{
   margin-top: -60px;
   margin-left: -240px;
    margin-right: -240px;
-}
+}*/
