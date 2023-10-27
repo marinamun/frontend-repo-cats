@@ -52,16 +52,21 @@ body {
 }
 
 /*AllCatsPage*/
+.cat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .cat-names img {
   border-radius: 15px;
   margin-top: 30px;
 }
 .cat-names {
+  flex: 0 1 calc(30% - 20px); /* Three cat cards per row with some spacing */
   background-color: white;
   border: 1px solid black;
-  margin-left: 350px;
-  margin-right: 350px;
+
   filter: drop-shadow(0 0 0.75rem white);
   margin-bottom: 30px;
   margin-top: 40px;

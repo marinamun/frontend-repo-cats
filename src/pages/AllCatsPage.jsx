@@ -31,7 +31,7 @@ function AllCatsPage() {
   }
 
   return (
-    <>
+    <div className="cat-container">
       {cats.map((cat) => (
         <div className="cat-names">
           <Link
@@ -51,7 +51,7 @@ function AllCatsPage() {
           </Link>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 export default AllCatsPage;
