@@ -1,6 +1,6 @@
 body {
   background-image: url("./pages/images/background6.png");
-  background-size: contain;
+  background-size: cover;
 }
 /*Credits*/
 #credits {
